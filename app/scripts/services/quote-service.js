@@ -16,7 +16,7 @@ angular.module('stockDogApp')
     var update = function(quotes){
       if(quotes.length === stocks.length){
         _.each(quotes, function(quote, idx){
-          var stock = stocks(idx);
+          var stock = stocks[idx];
           stock.lastPrice = parseFloat(quote.LastTradePriceOnly);
           stock.change = quote.Change;
           stock.percentChange = quote.ChangeinPercent;
@@ -67,6 +67,5 @@ angular.module('stockDogApp')
 
     // fetch new quotes every 5 seconds
     $interval(this.fetch, 5000);
-
 
   });

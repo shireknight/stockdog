@@ -9,11 +9,11 @@
  */
 angular.module('stockDogApp')
   .controller('MainCtrl', function ($scope, $location, WatchlistService) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    // this.awesomeThings = [
+    //   'HTML5 Boilerplate',
+    //   'AngularJS',
+    //   'Karma'
+    // ];
 
     $scope.watchlists = WatchlistService.query();
 

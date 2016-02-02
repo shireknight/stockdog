@@ -14,7 +14,7 @@
           class="btn btn-success btn-xs pull-right"
           ng-click="showStockModal()">
         <span class="glyphicon glyphicon-plus"></span>
-      </button>  
+      </button>
       </div>
       <div class="panel-body table-responsive">
         <div ng-hide="stocks.length" class="jumbotron">
@@ -23,7 +23,8 @@
           <p>Do so now by clicking the <span class="glyphicon glyphicon-plus">
             located above.</p>
         </div>
-        <p ng-repeat="stock in stocks">{{stock.company.symbol}}</p>
+        <!-- <p ng-repeat="stock in stocks">{{stock.company.symbol}}</p> -->
+        <stk-stock-table ng-show="stocks.length" watchlist="watchlist"/>
       </div>
     </div>
   </div>
